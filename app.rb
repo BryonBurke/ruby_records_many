@@ -31,13 +31,14 @@ get ('/albums') do
   erb(:albums)
 end
 
-get('/albums/:id') do
-  @album = Album.find(params[:id].to_i())
-  erb(:album)
-end
 
 get('/albums/new') do
   erb(:new_album)
+end
+
+get('/albums/:id') do
+  @album = Album.find(params[:id].to_i())
+  erb(:album)
 end
 
 get('/albums/:id/edit') do
